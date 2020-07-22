@@ -1,6 +1,5 @@
-# final.project.py
+# final.project.game.py
 # [Demetre Devidze]
-
 
 import random
 
@@ -16,8 +15,7 @@ help2 = " chances to guess a random integer between 1 and "
 help3 = "Remember, more guesses means a bigger range of integers to guess from."
 num_of_tries = "how many tries would you like to have?\n"
 level = "Pick the level of difficulty by having as many guesses as you like."
-answer_list = "yes" or "Yes" or "YES" or "sure" or "SURE" or "Sure" or "Yeah" or "YEAH" or "yeah" or "yep"
-answers_and = "yes" and "YES" and "Yes" and "sure" and "yeah"
+answer_list = ["yes","Yes","YES","sure","SURE","Sure","Yeah","yeah","YEAH","yep","YEP","Yep"]
 user_name = input("Hey, what's your name? \n")
 lets_go = "Great decision " +user_name+ "! " +level+ "\n" +help3+ "\n" +num_of_tries
 lose = "Sorry " +user_name+ "! You are out of guesses!"
@@ -29,8 +27,7 @@ too_small = "Too small " +user_name+ "! Try again!"
 start_game = "Hi " +user_name+ ", would you like to play a game on guessing random integers?\n"
 play_game = input(start_game)
 
-
-if play_game == answer_list:
+if play_game in answer_list:
     lev_of_diff = input(lets_go)
     range1 = int(lev_of_diff) - 1
     rules = good+str(lev_of_diff)+help2+str(2 ** int(lev_of_diff) - 1)
